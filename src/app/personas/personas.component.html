@@ -1,0 +1,113 @@
+
+
+
+<div class="content-wrapper">
+  <div class="container-fluid">
+    <div class="card mb-3">
+      <div class="card-header">
+        <p *ngIf="!actualizar"><span class="fa fa-list"></span> Registrar empleado</p>
+        <p *ngIf="actualizar"><span class="fa fa-list"></span> Actualizar empleado</p>
+      </div>
+      <div class="card-body">
+      <div class="card ">
+        <div class="card-body">
+          <form >
+            <div class="form-group">
+              <div class="form-row">
+                <div class="col-md-3">
+                  <label for="cedulaEmp">Tipo de documento</label>
+                  <input name="Cedula" class="form-control" id="cedulaEmp" type="number" aria-describedby="nameHelp" placeholder="Tipo de documento">               
+                </div>
+                 <div class="col-md-3">
+                  <label for="nombreEmp">Numero</label>
+                  <input class="form-control" id="nombreEmp" type="text" aria-describedby="nameHelp" placeholder="Numero">
+                </div>
+
+                <div class="col-md-3">
+                  <label for="apellidoEmp">Primer Nombre</label>
+                  <input name="Nombre" class="form-control" id="apellidoEmp" type="text" aria-describedby="nameHelp" placeholder="Primer Nombre">
+                </div>
+                <div class="col-md-3">
+                  <label for="dirEmp">Segundo Nombre</label>
+                  <input name="egundo Nombre" class="form-control" id="dirEmp" type="text" placeholder="Segundo nombre" >
+                </div>
+                
+
+              </div>
+              <div class="form-row">
+                
+               
+                
+              </div>
+            </div>
+
+
+            <div class="form-group">
+              <div class="form-row">
+                <div class="col-md-3">
+                  <label for="cedulaEmp">Primer Apellido</label>
+                  <input name="Cedula" class="form-control" id="cedulaEmp" type="number" aria-describedby="nameHelp" placeholder="Primer Apellido">               
+                </div>
+                 <div class="col-md-3">
+                  <label for="nombreEmp">Segundo Apellido</label>
+                  <input class="form-control" id="nombreEmp" type="text" aria-describedby="nameHelp" placeholder="Segundo Apellido">
+                </div>
+
+                <div class="col-md-3">
+                  <label for="apellidoEmp">Direccion </label>
+                  <input name="Nombre" class="form-control" id="apellidoEmp" type="text" aria-describedby="nameHelp" placeholder="Direccion">
+                </div>
+                <div class="col-md-3">
+                  <label for="dirEmp">Telefono</label>
+                  <input name="egundo Nombre" class="form-control" id="dirEmp" type="text" placeholder="Telefono" >
+                </div>
+                
+
+              </div>
+              <div class="form-row">
+                
+               
+                
+              </div>
+            </div>
+
+
+            <div class="form-group">
+              <div class="form-row">
+                <div class="col-md-3">
+                  <label for="cedulaEmp">Correo electronico</label>
+                  <input name="Cedula" class="form-control" id="cedulaEmp" type="number" aria-describedby="nameHelp" placeholder="Correo">               
+                </div>
+                 <div class="col-md-3">
+                  <label for="nombreEmp">Fecha de Nacimiento</label>
+                  <input class="form-control" id="nombreEmp" type="text" aria-describedby="nameHelp" placeholder="Fecha de Nacimiento">
+                </div>
+                
+                 <div class="col-md-3">
+            				<input type="submit" style = "right:0px; bottom: 0px; position:absolute;" value="Guardar persona" class="btn btn-primary btn-lg" [disabled]="exist || cedulaBusq">
+            			</div>
+
+                 <div class="col-md-3" >
+            				<input type="submit" style ="bottom: 0px; position:absolute;" value="Ir a la lista" class="btn btn-danger btn-lg" [disabled]="exist || cedulaBusq">
+            			</div>
+              </div>
+              <div class="form-row">
+                
+               
+                
+              </div>
+            </div>
+
+
+
+
+
+
+            
+          </form>
+        </div>
+      </div>
+      </div>
+  </div>
+  </div>
+</div>

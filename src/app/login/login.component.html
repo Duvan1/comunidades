@@ -1,0 +1,29 @@
+<div class=" max-leght">
+  <div class="container">
+    <div class="card card-login mx-auto mt-5">
+      <div class="card-header">Login</div>
+      <div class="card-body">
+        <form >
+          <div class="form-group">
+            <label for="username">Nombre de usuario: </label>
+            <input class="form-control" name="username" type="text" aria-describedby="emailHelp" placeholder="Enter email" required>
+            <span class="alert alert-danger" role="alert">
+              El nombre de usuario es <strong>obligatorio.</strong>
+            </span>
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input class="form-control" name="password" type="password" placeholder="Password">
+            <span class="alert alert-danger" role="alert">
+              La contraseña es <strong>obligatoria.</strong></span>
+          </div>    
+          <input type="submit" name="login-btn" class="btn btn-primary btn-block" value="Login" [disabled]="!loginForm.form.valid"> 
+        </form>
+        <br>
+        <div class="text-center">
+          <a class="d-block small" >¿Olvidó su contraseña?</a>
+        </div>
+      </div>
+  </div>
+</div>
+

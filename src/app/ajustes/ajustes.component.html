@@ -1,0 +1,59 @@
+<div class="content-wrapper">
+	<div class="container-fluid">
+		<div class="card mb-3">
+			<div class="card-header">
+				<p *ngIf="!actualizar"><span class="fa fa-list"></span> Registrar empleado</p>
+				<p *ngIf="actualizar"><span class="fa fa-list"></span> Actualizar empleado</p>
+			</div>
+			<div class="card-body">
+				<div class="card ">
+					<div class="card-body">
+						<form >
+							<div class="form-group">
+								<div class="form-row">
+									<div class="col-md-3">
+										<label for="cedulaEmp">IntegraVol</label>
+									</div>
+									<div class="col-md-9">
+										<input name="Cedula" class="form-control" id="cedulaEmp" type="number" aria-describedby="nameHelp" placeholder="Tipo de documento">
+									</div>
+								</div>
+								<br>
+								<div class="form-row">
+									<div class="col-md-3">
+										<label for="nombrecompleto">Nombre Completo</label>
+									</div>
+									<div class="col-md-9">
+										<input name="nombrecompleto" class="form-control" id="nombrecompleto" type="number" aria-describedby="nameHelp" placeholder="Tipo de documento">
+									</div>
+
+
+								</div>
+								<br>
+								<div class="form-row">
+									<div class="col-md-3">
+										<label for="logo">Logotipo</label>
+									</div>
+									<div class="col-md-9">
+										<input type="file" class="form-control-file" id="logo">
+									</div>
+
+
+								</div>
+								<br>
+								<div class="form-row">
+									<div class="col-md-3" >
+									<input type="submit" value="Guardar cambios" class="btn btn-danger btn-lg">
+								</div>
+								</div>
+							</div>
+
+								
+
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

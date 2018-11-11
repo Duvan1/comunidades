@@ -1,0 +1,78 @@
+<div class="content-wrapper">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-12">
+
+				<table
+				class="table table-striped"
+				[mfData]="data | dataFilter : filterQuery"
+				#mf="mfDataTable"
+				[mfRowsOnPage]="rowsOnPage"
+				[(mfSortBy)]="sortBy"
+				[(mfSortOrder)]="sortOrder"
+				>
+				<thead>
+					<tr>
+						<th >
+							<mfDefaultSorter by="name">Documento</mfDefaultSorter>
+						</th>
+						<th >
+							<mfDefaultSorter by="email">Primer Apellido</mfDefaultSorter>
+						</th>
+						<th>
+							<mfDefaultSorter by="age">Primer Nombre</mfDefaultSorter>
+						</th>
+						
+						<th>
+							<mfDefaultSorter by="city">Acciones</mfDefaultSorter>
+						</th>
+					</tr>
+					<tr>
+						<th colspan="5">
+							Filter by name:
+							<input class="form-control" [(ngModel)]="filterQuery"/>
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr *ngFor="let item of mf.data">
+						<td>{{item.name}}</td>
+						<td>{{item.email}}</td>
+						<td class="text-right">{{item.age}}</td>
+						
+						<td>
+							<div class="row">
+								<div class="col-md-4">
+									<button class="btn btn-info">
+									<i class="fa fa-edit"></i></button>
+								</div>
+								<div class="col-md-4">
+									<button class="btn btn-info">
+									<i class="fa fa-id-card"></i></button>
+								</div>
+								<div class="col-md-4">
+									<button class="btn btn-info">
+									<i class="fa fa-trash"></i></button>
+								</div>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+				<tfoot>
+					<tr>
+						<td colspan="4">
+							<mfBootstrapPaginator [rowsOnPageSet]="[5,10,25]"></mfBootstrapPaginator>
+						</td>
+					</tr>
+				</tfoot>
+			</table>
+
+				<div class="col-md-4">
+					<button class="btn btn-danger">
+					Imprimir Listado</button>
+				</div>
+
+		</div>
+	</div>
+</div>
+</div>

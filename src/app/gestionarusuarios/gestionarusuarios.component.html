@@ -1,0 +1,106 @@
+<div class="content-wrapper">
+  <div class="container-fluid">
+    <div class="col-xl-3 col-sm-6 mb-3">
+    Gestionar Usuarios
+  </div>
+  <div class="form-group">
+              <div class="form-row">
+                <div class="col-md-3">
+                  <label for="cedulaEmp">Nombre de usuario</label>
+                  <input name="Cedula" class="form-control" id="cedulaEmp" type="number" aria-describedby="nameHelp" placeholder="">               
+                </div>
+                 <div class="col-md-3">
+                  <label for="nombreEmp">Contraseña</label>
+                  <input class="form-control" id="nombreEmp" type="text" aria-describedby="nameHelp" placeholder="">
+                </div>
+
+                <div class="col-md-3">
+                  <label for="apellidoEmp">Confirmar contraseña</label>
+                  <input name="Nombre" class="form-control" id="apellidoEmp" type="text" aria-describedby="nameHelp" placeholder="">
+                </div>
+                <div class="col-md-3">
+
+                    <input type="submit" style = "right:0px; bottom: 0px; position:absolute;" value="Crear usuario" class="btn btn-primary btn-lg" [disabled]="exist || cedulaBusq">
+                </div>
+                
+
+              </div>
+              <div class="form-row">
+                
+               
+                
+              </div>
+            </div>
+
+    <div class="row">
+      <div class="col-md-12">
+
+        <table
+        class="table table-striped"
+        [mfData]="data | dataFilter : filterQuery"
+        #mf="mfDataTable"
+        [mfRowsOnPage]="rowsOnPage"
+        [(mfSortBy)]="sortBy"
+        [(mfSortOrder)]="sortOrder"
+        >
+        <thead>
+          <tr>
+            <th >
+              <mfDefaultSorter by="name">ID</mfDefaultSorter>
+            </th>
+            <th>
+              <mfDefaultSorter by="age">Nombre</mfDefaultSorter>
+            </th>
+            
+            <th>
+              <mfDefaultSorter by="city">Acciones</mfDefaultSorter>
+            </th>
+          </tr>
+          <tr>
+            <th colspan="5">
+              Filter by name:
+              <input class="form-control" [(ngModel)]="filterQuery"/>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of mf.data">
+            <td>{{item.name}}</td>
+            <td>{{item.email}}</td>
+            
+            <td>
+              <div class="row">
+                <div class="col-md-4">
+                  <button class="btn btn-info">
+                  <i class="fa fa-edit"></i></button>
+                </div>
+                <div class="col-md-4">
+                  <button class="btn btn-info">
+                  <i class="fa fa-id-card"></i></button>
+                </div>
+                <div class="col-md-4">
+                  <button class="btn btn-info">
+                  <i class="fa fa-trash"></i></button>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="4">
+              <mfBootstrapPaginator [rowsOnPageSet]="[5,10,25]"></mfBootstrapPaginator>
+            </td>
+          </tr>
+        </tfoot>
+      </table>
+
+        <div class="col-md-4">
+          <button class="btn btn-danger">
+          Imprimir Listado</button>
+        </div>
+
+    </div>
+  </div>
+</div>
+</div>
